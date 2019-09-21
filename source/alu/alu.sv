@@ -5,33 +5,23 @@ module alu(input logic [63:0] a,
 				output logic [63:0] result,
 				output logic zero);
 				
-	always_comb
-	case (ALUControl)
-		// AND
-		4'b0000: result = a & b;
-		
-		// OR
-		4'b0001: result = a | b;
-		
-		// ADD
-		4'b0010: result = a + b;
-		
-		// SUB
-		4'b0110: result = a - b;
-		
-		// PASS B
-		4'b0111: result = b;
-		
-		// NOR
-		4'b1100: result = b; // TODO
-		
-		default: result = '0;
-	endcase
+	always_comb begin
+		case (ALUControl)
+			4'b0000: result = a & b;
+			4'b0001: result = a | b;
+			4'b0010: result = a + b;
+			4'b0110: result = a - b;
+			4'b0111: result = b;
+			4'b1100: result = ~ (a | b);
+			default: result = 64'b0;
+		endcase
 	
-	always_comb
-	case(result)
-		'0: zero = 1;
-		default: zero = 0;
-	endcase
+		if (result === 0) begin
+			zero = 1;
+		end else begin
+			zero = 0;
+		end
+	
+	end
 				
 endmodule

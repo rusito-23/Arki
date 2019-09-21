@@ -2,11 +2,11 @@
 module signext(input logic [31:0] a, output logic [63:0] y);
 	
 	always_comb
-	case (a[31:20])
-		11'b11111000010: y = a << 32;
-		11'b11111000000: y = a << 32;
-		11'b10110100???: y = a << 32;
-		default: y = '0;
+	case (a[31:21]) // opcode
+		11'b111_1100_0010: y = {{32{a[20]}}, a[31:0]}; 	// LDUR
+		11'b111_1100_0000: y = {{32{a[20]}}, a[31:0]};	// STUR
+		11'b101_1010_0???: y = {{32{a[23]}}, a[31:0]};	// CBZ
+		default: y = 64'b0;
 	endcase
 	
 endmodule
