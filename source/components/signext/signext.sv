@@ -1,4 +1,11 @@
 
+/**
+* Sign Extendor:
+* for instructions with immediate operands,
+* extends the sign for the immediate.
+* Any other case, returns 0.
+*/
+
 module signext(input logic [31:0] a, output logic [63:0] y);
 	
 	always_comb

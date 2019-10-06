@@ -1,4 +1,10 @@
 
+/**
+* Flip Flop D-Type Asynchronous:
+* on clock -> returns the input (d)
+* reset -> returns 0
+*/
+
 module flopr #(parameter N=64)
 					(input logic clk,
 					 input logic reset,

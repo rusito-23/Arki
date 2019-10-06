@@ -1,4 +1,10 @@
 
+/**
+* Multiplexor:
+* Uses a single bit to select between two
+* given inputs.
+*/
+
 module mux2
 			#(parameter N = 64)
 			(input logic [N-1: 0] d0, d1,

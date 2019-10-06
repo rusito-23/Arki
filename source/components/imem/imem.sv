@@ -1,3 +1,9 @@
+
+/**
+* ROM Memory Implementation:
+* Saves instructions to the program to be excecuted.
+*/
+
 module imem 
 			#(parameter N = 32)
 			(input logic [5:0] addr, 

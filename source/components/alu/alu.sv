@@ -1,4 +1,12 @@
 
+/**
+* ALU:
+* Performs different operations
+* between two inputs (a, b).
+* Output: b -> result
+			 zero -> 1 if result is 0, 1 otherwise
+*/
+
 module alu(input logic [63:0] a,
 				input logic [63:0] b,
 				input logic [3:0] ALUControl,

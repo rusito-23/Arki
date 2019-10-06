@@ -1,4 +1,10 @@
 
+/**
+* Registers File:
+* Writes and Reads 64 bit words
+* 32 Registers.
+*/
+
 module regfile
 			(input logic clk,
 			input logic we3,

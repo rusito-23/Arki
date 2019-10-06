@@ -1,4 +1,11 @@
 
+/**
+* Decoder:
+* Given the instruction, returns
+* several information on what the
+* given instruction does.
+*/
+
 module maindec(
 		input logic [10:0] Op,
 		output logic Reg2Loc,

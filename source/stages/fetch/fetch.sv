@@ -1,4 +1,9 @@
 
+/**
+* Fetch Stage:
+* Returns the instruction to be executed next.
+*/
+
 module fetch(input logic PCSrc_F,
 				 input logic clk,
 				 input logic reset,
