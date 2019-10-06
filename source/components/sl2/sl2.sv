@@ -7,7 +7,7 @@
 module sl2
 			#(parameter N=64)
 			(input logic [N-1: 0] in,
-			 output logic [N-1: 0] out)
+			 output logic [N-1: 0] out);
 			 
 	assign out = in << 2;
 	
