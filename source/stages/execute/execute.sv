@@ -17,17 +17,17 @@ module execute(input logic AluSrc,
 					
 	// Out: PCBranch_E
 	logic [63:0] signImm_E_SL;
-	sl2(signImm_E, signImm_E_SL);
-	adder(signImm_E_SL, PC_E, PC_Branch_E);
+	sl2 sl2EX(signImm_E, signImm_E_SL);
+	adder adderEX(signImm_E_SL, PC_E, PCBranch_E);
 	
 	// Out: writeData_E
 	assign writeData_E = readData2_E;
 	
 	// ALU Multiplexor
 	logic [63:0] aluInput;
-	mux2(signImm_E, readData2_E, AluSrc, aluInput);
+	mux2 mux2EX(signImm_E, readData2_E, AluSrc, aluInput);
 	
 	// Out: aluResult_E
-	alu(readData1_E, aluInput, AluControl, aluResult_E);
+	alu aluEX(readData1_E, aluInput, AluControl, aluResult_E);
 
 endmodule

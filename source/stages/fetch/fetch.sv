@@ -19,9 +19,9 @@ module fetch(input logic PCSrc_F,
 	
 	// modules
 	
-	mux2 muxFetch(resultAdder, PCBranch_F, PCSrc_F, outMux);
-	flopr flipflop(clk, reset, outMux, outFlipFlop);
-	adder add(four, outFlipFlop, resultAdder);
+	mux2 muxFETCH(resultAdder, PCBranch_F, PCSrc_F, outMux);
+	flopr floprFETCH(clk, reset, outMux, outFlipFlop);
+	adder adderFETCH(four, outFlipFlop, resultAdder);
 		
 	assign imem_addr_F = outFlipFlop;
 				 
