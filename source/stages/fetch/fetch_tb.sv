@@ -1,4 +1,7 @@
 
+/* TestBench 
+* Top-Level Entity: fetch */
+
 module fetch_tb();
 
 	logic PCSrc_F;

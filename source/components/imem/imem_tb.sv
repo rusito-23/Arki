@@ -1,3 +1,7 @@
+
+/* TestBench 
+* Top-Level Entity: imem */
+
 module imem_tb();
 	logic [5:0] addr;
 	logic	[31:0] q; // internal variables

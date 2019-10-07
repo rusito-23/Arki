@@ -1,4 +1,6 @@
 
+/* TestBench 
+* Top-Level Entity: mux2 */
 
 module mux2_tb();
 

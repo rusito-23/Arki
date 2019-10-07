@@ -1,4 +1,6 @@
 
+/* TestBench 
+* Top-Level Entity: maindec */
 
 module maindec_tb();
 

@@ -1,4 +1,6 @@
 
+/* TestBench 
+* Top-Level Entity: flopr */
 
 module flopr_tb();
 

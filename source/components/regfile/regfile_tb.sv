@@ -1,4 +1,7 @@
 
+/* TestBench 
+* Top-Level Entity: regfile */
+
 module regfile_tb();
 
 	// internal variables
