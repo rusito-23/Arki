@@ -1,6 +1,6 @@
 
 /**
-* Sign Extendor:
+* Sign Extensor:
 * for instructions with immediate operands,
 * extends the sign for the immediate.
 * Any other case, returns 0.

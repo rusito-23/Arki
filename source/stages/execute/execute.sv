@@ -28,6 +28,6 @@ module execute(input logic AluSrc,
 	mux2 mux2EX(signImm_E, readData2_E, AluSrc, aluInput);
 	
 	// Out: aluResult_E
-	alu aluEX(readData1_E, aluInput, AluControl, aluResult_E);
+	alu aluEX(readData1_E, aluInput, AluControl, aluResult_E, zero_E);
 
 endmodule

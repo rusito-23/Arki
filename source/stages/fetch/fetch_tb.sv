@@ -13,7 +13,7 @@ module fetch_tb();
 	// Setup Clock
 	
 	always begin
-		clk = 0; #10; clk = 1; #10;
+		clk = 0; #10ns; clk = 1; #10ns;
 	end
 	
 	// Test
@@ -21,21 +21,21 @@ module fetch_tb();
 	initial begin
 		
 		PCBranch_F = 64'b0101;
-		PCSrc_F = 0; reset = 1; #50; 
+		PCSrc_F = 0; reset = 1; #50ns; 
 		
 		/**
 		* We wait 10 clock cycles 
 		* to check the PC actually increments by 4 */
-		reset = 0; #50;
+		reset = 0; #50ns;
 		
 		/** 
 		* We turn the PCSrc_F to Positive Value
 		* to check if the value we are receiving
 		* is actually the PCBranch_F */
 		PCSrc_F = 1;
-		#10; PCBranch_F = 64'b1111;
+		#10ns; PCBranch_F = 64'b1111;
 		
-		#20;
+		#20ns;
 		$stop;
 	
 	end

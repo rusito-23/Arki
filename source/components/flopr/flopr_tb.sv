@@ -12,26 +12,26 @@ module flopr_tb();
 	// apply inputs
 	initial begin
 	
-		reset = 1; clk = 0; d = 0; #10000;
-		clk = 1; #10000;
-		clk = 0; d = 1; #10000;
-		clk = 1; #10000;
-		clk = 0; d = 2; #10000;
-		clk = 1; #10000;
-		clk = 0; d = 3; #10000;
-		clk = 1; #10000;
-		clk = 0; d = 4; #10000;
-		clk = 1; #10000;
-		clk = 0; d = 5; #10000;
+		reset = 1; clk = 0; d = 0; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d = 1; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d = 2; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d = 3; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d = 4; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d = 5; #10ns;
 		
-		reset = 0; clk = 1; #10000;
-		clk = 0; d = 6; #10000;
-		clk = 1; #10000;
-		clk = 0; d = 7; #10000;
-		clk = 1; #10000;
-		clk = 0; d = 8; #10000;
-		clk = 1; #10000;
-		clk = 0; d = 9; #10000;
+		reset = 0; clk = 1; #10ns;
+		clk = 0; d = 6; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d = 7; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d = 8; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d = 9; #10ns;
 		
 	end
 	
@@ -44,26 +44,26 @@ module flopr_tb();
 		// apply inputs
 	initial begin
 	
-		reset = 1; clk = 0; d2 = 0; #10000;
-		clk = 1; #10000;
-		clk = 0; d2 = 1; #10000;
-		clk = 1; #10000;
-		clk = 0; d2 = 2; #10000;
-		clk = 1; #10000;
-		clk = 0; d2 = 3; #10000;
-		clk = 1; #10000;
-		clk = 0; d2 = 4; #10000;
-		clk = 1; #10000;
-		clk = 0; d2 = 5; #10000;
+		reset = 1; clk = 0; d2 = 0; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d2 = 1; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d2 = 2; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d2 = 3; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d2 = 4; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d2 = 5; #10ns;
 		
-		reset = 0; clk = 1; #10000;
-		clk = 0; d2 = 6; #10000;
-		clk = 1; #10000;
-		clk = 0; d2 = 7; #10000;
-		clk = 1; #10000;
-		clk = 0; d2 = 8; #10000;
-		clk = 1; #10000;
-		clk = 0; d2 = 9; #10000;
+		reset = 0; clk = 1; #10ns;
+		clk = 0; d2 = 6; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d2 = 7; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d2 = 8; #10ns;
+		clk = 1; #10ns;
+		clk = 0; d2 = 9; #10ns;
 		
 	end
 	
