@@ -15,13 +15,13 @@ module alu(input logic [63:0] a,
 				
 	always_comb begin
 		case (ALUControl)
-			4'b0000: result = a & b;
-			4'b0001: result = a | b;
-			4'b0010: result = a + b;
-			4'b0110: result = a - b;
-			4'b0111: result = b;
-			4'b1100: result = ~ (a | b);
-			default: result = 64'b0;
+			4'b0000: result = a & b; 		// AND
+			4'b0001: result = a | b; 		// OR
+			4'b0010: result = a + b; 		// SUM
+			4'b0110: result = a - b; 		// SUB
+			4'b0111: result = b;     		// NUSE
+			4'b1100: result = ~ (a | b); 	// NOR
+			default: result = 64'b0;		// 0
 		endcase
 	
 		if (result === 0) begin
