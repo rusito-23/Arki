@@ -68,3 +68,9 @@ incremental_db/
 db/
 _output_files/
 PLLJ_PLLSPE_INFO.txt
+
+# ignore armv8 create assembly files
+armv8_createAssembly/*.elf
+armv8_createAssembly/*.o
+armv8_createAssembly/*.txt
+armv8_createAssembly/*.list
