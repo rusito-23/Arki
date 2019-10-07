@@ -8,7 +8,7 @@ module flopr_tb();
 	logic clk, reset;
 	logic [63: 0] d, q;
 	
-	// instantiate device under test (65 bits)
+	// instantiate device under test
 	flopr dut(clk, reset, d, q);
 	
 	// apply inputs

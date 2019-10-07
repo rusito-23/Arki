@@ -26,7 +26,7 @@ module execute #(parameter N=64)
 	
 	// ALU Multiplexor
 	logic [N-1:0] aluInput;
-	mux2 #(N) mux2EX(signImm_E, readData2_E, AluSrc, aluInput);
+	mux2 #(N) mux2EX(readData2_E, signImm_E, AluSrc, aluInput);
 	
 	// Out: aluResult_E
 	alu aluEX(readData1_E, aluInput, AluControl, aluResult_E, zero_E);

@@ -27,10 +27,8 @@ module regfile
 	
 	// Asynchronous read
 	
-	always_comb begin
-		rd1 = REGISTERS[ra1];
-		rd2 = REGISTERS[ra2];
-	end
+	assign rd1 = REGISTERS[ra1];
+	assign rd2 = REGISTERS[ra2];
 	
 	// Synchronous write
 	
