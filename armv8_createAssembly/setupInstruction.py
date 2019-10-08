@@ -45,7 +45,7 @@ def main():
 
         # Re-Build the file
 
-        instruction_set = ', \n\t\t\t\t\t\t\t\t\t\t\t'.join(instruction_set)
+        instruction_set = ',\n\t\t\t\t\t\t\t\t\t\t\t'.join(instruction_set)
 
         new_file = first + '{' + instruction_set + '}' + third
 
