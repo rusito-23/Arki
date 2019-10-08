@@ -68,6 +68,7 @@ incremental_db/
 db/
 _output_files/
 PLLJ_PLLSPE_INFO.txt
+msim_transcript
 
 # ignore armv8 create assembly files
 armv8_createAssembly/*.elf
