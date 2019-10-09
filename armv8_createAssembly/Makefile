@@ -22,7 +22,7 @@ main.o : main.s
 	$(ARMGNU)-as $(AOPS) main.s -o main.o
 
 main.list: memmap main.o
-	cp main.s $(FILE).s
+	-cp main.s $(FILE).s
 	$(ARMGNU)-ld main.o -T memmap -o main.elf -M > memory_map.txt
 	$(ARMGNU)-objdump -D main.elf > $(FILE).list
 
