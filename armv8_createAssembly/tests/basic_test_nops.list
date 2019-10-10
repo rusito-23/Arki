@@ -4,7 +4,7 @@ main.elf:     file format elf64-littleaarch64
 
 Disassembly of section .text:
 
-0000000000000000 <Loop-0x58>:
+0000000000000000 <Loop-0x44>:
    0:	f8000000 	stur	x0, [x0]
    4:	f8008001 	stur	x1, [x0, #8]
    8:	f8010002 	stur	x2, [x0, #16]
@@ -12,24 +12,19 @@ Disassembly of section .text:
   10:	f8020004 	stur	x4, [x0, #32]
   14:	f8028005 	stur	x5, [x0, #40]
   18:	f8030006 	stur	x6, [x0, #48]
-  1c:	d503201f 	nop
-  20:	d503201f 	nop
-  24:	d503201f 	nop
-  28:	d503201f 	nop
-  2c:	d503201f 	nop
-  30:	f8400007 	ldur	x7, [x0]
-  34:	f8408008 	ldur	x8, [x0, #8]
-  38:	f8410009 	ldur	x9, [x0, #16]
-  3c:	f841800a 	ldur	x10, [x0, #24]
-  40:	f842000b 	ldur	x11, [x0, #32]
-  44:	f842800c 	ldur	x12, [x0, #40]
-  48:	f843000d 	ldur	x13, [x0, #48]
-  4c:	cb0e01ce 	sub	x14, x14, x14
-  50:	b400004e 	cbz	x14, 58 <Loop>
-  54:	cb01000f 	sub	x15, x0, x1
+  1c:	f8400007 	ldur	x7, [x0]
+  20:	f8408008 	ldur	x8, [x0, #8]
+  24:	f8410009 	ldur	x9, [x0, #16]
+  28:	f841800a 	ldur	x10, [x0, #24]
+  2c:	f842000b 	ldur	x11, [x0, #32]
+  30:	f842800c 	ldur	x12, [x0, #40]
+  34:	f843000d 	ldur	x13, [x0, #48]
+  38:	cb0e01ce 	sub	x14, x14, x14
+  3c:	b400004e 	cbz	x14, 44 <Loop>
+  40:	cb01000f 	sub	x15, x0, x1
 
-0000000000000058 <Loop>:
-  58:	8b01000f 	add	x15, x0, x1
-  5c:	d503201f 	nop
-  60:	d503201f 	nop
-  64:	f803800f 	stur	x15, [x0, #56]
+0000000000000044 <Loop>:
+  44:	8b01000f 	add	x15, x0, x1
+  48:	d503201f 	nop
+  4c:	d503201f 	nop
+  50:	f803800f 	stur	x15, [x0, #56]

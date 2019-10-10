@@ -10,13 +10,6 @@
 	stur x5,[x0,#40]
 	stur x6,[x0,#48]
 
-# Instructiones NOP
-	nop
-	nop
-	nop
-	nop
-	nop
-
 # Lectura de memoria en los registros
 	ldur x7,[x0]
 	ldur x8,[x0,#8]
