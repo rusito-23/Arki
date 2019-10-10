@@ -24,11 +24,25 @@ module regfile
 		64'd19, 64'd20, 64'd21, 64'd22, 64'd23, 64'd24,
 		64'd25, 64'd26, 64'd27, 64'd28, 64'd29, 64'd30, 64'd0
 	};
+
 	
-	// Asynchronous read
+	// Asynchronous Read before write
+	always_comb begin
+	if (ra1 === wa3 && we3 === 1) begin
+		rd1 = wd3;
+		rd2 = REGISTERS[ra2];
+	end if (ra2 === wa3 && we3 === 1) begin
+		rd2 = wd3;
+		rd1 = REGISTERS[ra1];
+	end else begin
+		rd1 = REGISTERS[ra1];
+		rd2 = REGISTERS[ra2];
+	end
+	end
 	
-	assign rd1 = REGISTERS[ra1];
-	assign rd2 = REGISTERS[ra2];
+	// Async Read
+	// assign rd1 = REGISTERS[ra1];
+	// assign rd2 = REGISTERS[ra2];
 	
 	// Synchronous write
 	
