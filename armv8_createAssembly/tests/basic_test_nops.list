@@ -32,7 +32,4 @@ Disassembly of section .text:
   58:	8b01000f 	add	x15, x0, x1
   5c:	d503201f 	nop
   60:	d503201f 	nop
-  64:	d503201f 	nop
-  68:	d503201f 	nop
-  6c:	d503201f 	nop
-  70:	f803800f 	stur	x15, [x0, #56]
+  64:	f803800f 	stur	x15, [x0, #56]

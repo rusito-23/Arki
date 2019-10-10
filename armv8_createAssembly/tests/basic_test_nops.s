@@ -36,9 +36,6 @@ Loop:
 # Instrucciones NOP
 	nop
 	nop
-	nop
-	nop
-	nop
 
 # Carga del resultado de la sumatoria en memoria
 	stur x15, [x0,#56]

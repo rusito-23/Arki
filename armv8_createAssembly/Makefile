@@ -9,7 +9,7 @@ asm : main.list
 
 all : asm
 
-deploy: main.list install
+deploy: clean main.list install
 
 clean :
 	rm -f *.o
