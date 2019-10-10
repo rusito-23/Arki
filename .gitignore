@@ -74,3 +74,8 @@ msim_transcript
 armv8_createAssembly/*.elf
 armv8_createAssembly/*.o
 armv8_createAssembly/*.txt
+
+# Ignore OS Generated files
+*._*
+.DS_Store
+
