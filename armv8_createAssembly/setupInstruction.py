@@ -16,7 +16,10 @@ def main(source_file):
         # Find all instructions
         instructions = re.findall(HEXA_REGEX_PATTERN, source)
         instructions = [x.replace(':\t', '') for x in instructions]
-        print("INSTRUCTIONS: {}".format(instructions))
+
+        print("SETING UP INSTRUCTIONS: {}".format(instructions))
+        print("Total instructions: {}".format(len(instructions)))
+
         source_orig.close()
 
     if (instructions):
