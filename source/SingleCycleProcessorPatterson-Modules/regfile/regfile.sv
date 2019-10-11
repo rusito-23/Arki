@@ -16,7 +16,7 @@ module regfile
 			output logic [63:0] rd2);
 
 	// Register intialization
-	
+
 	logic [63:0] REGISTERS [0:31] = '{
 		64'd0, 64'd1, 64'd2, 64'd3, 64'd4, 64'd5, 64'd6,
 		64'd7, 64'd8, 64'd9, 64'd10, 64'd11, 64'd12,
@@ -25,31 +25,17 @@ module regfile
 		64'd25, 64'd26, 64'd27, 64'd28, 64'd29, 64'd30, 64'd0
 	};
 
-	
-	// Asynchronous Read before write
-	always_comb begin
-	if (ra1 === wa3 && we3 === 1) begin
-		rd1 = wd3;
-		rd2 = REGISTERS[ra2];
-	end if (ra2 === wa3 && we3 === 1) begin
-		rd2 = wd3;
-		rd1 = REGISTERS[ra1];
-	end else begin
-		rd1 = REGISTERS[ra1];
-		rd2 = REGISTERS[ra2];
-	end
-	end
-	
+
 	// Async Read
-	// assign rd1 = REGISTERS[ra1];
-	// assign rd2 = REGISTERS[ra2];
-	
+	assign rd1 = REGISTERS[ra1];
+	assign rd2 = REGISTERS[ra2];
+
 	// Synchronous write
-	
-	always_ff @(posedge clk) begin 
+
+	always_ff @(posedge clk) begin
 		if(we3 === 1 && wa3 !== 5'd31) begin
 			REGISTERS[wa3] <= wd3;
 		end
 	end
-	
+
 endmodule

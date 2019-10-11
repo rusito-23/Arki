@@ -1,12 +1,12 @@
 # -------------------------------------------------------------------------- #
 #
 # Copyright (C) 2018  Intel Corporation. All rights reserved.
-# Your use of Intel Corporation's design tools, logic functions 
-# and other software and tools, and its AMPP partner logic 
-# functions, and any output files from any of the foregoing 
-# (including device programming or simulation files), and any 
-# associated documentation or information are expressly subject 
-# to the terms and conditions of the Intel Program License 
+# Your use of Intel Corporation's design tools, logic functions
+# and other software and tools, and its AMPP partner logic
+# functions, and any output files from any of the foregoing
+# (including device programming or simulation files), and any
+# associated documentation or information are expressly subject
+# to the terms and conditions of the Intel Program License
 # Subscription Agreement, the Intel Quartus Prime License Agreement,
 # the Intel FPGA IP License Agreement, or other applicable license
 # agreement, including, without limitation, that your use is for
@@ -68,8 +68,6 @@ set_global_assignment -name SYSTEMVERILOG_FILE source/components/alu/alu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE source/components/alu/alu_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE source/components/imem/imem.sv
 set_global_assignment -name SYSTEMVERILOG_FILE source/components/imem/imem_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE source/components/regfile/regfile.sv
-set_global_assignment -name SYSTEMVERILOG_FILE source/components/regfile/regfile_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE source/stages/maindec/maindec.sv
 set_global_assignment -name SYSTEMVERILOG_FILE source/stages/maindec/maindec_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE source/stages/fetch/fetch.sv
@@ -128,6 +126,8 @@ set_global_assignment -name EDA_TEST_BENCH_FILE source/components/alu/alu_tb.sv 
 
 # PipelinedProcessorPatterson Files
 
+set_global_assignment -name SYSTEMVERILOG_FILE "source/PipelinedProcessorPatterson-Modules/regfile/regfile.sv"
+set_global_assignment -name SYSTEMVERILOG_FILE "source/PipelinedProcessorPatterson-Modules/regfile/regfile_tb.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "source/PipelinedProcessorPatterson-Modules/aludec.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "source/PipelinedProcessorPatterson-Modules/controller.sv"
 set_global_assignment -name SYSTEMVERILOG_FILE "source/PipelinedProcessorPatterson-Modules/datapath.sv"
