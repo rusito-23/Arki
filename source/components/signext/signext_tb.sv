@@ -33,6 +33,13 @@ module signext_tb();
 		// Immediate -> -23
 		instruction = { 11'b11111000000, 9'b111101001, 12'b1}; #10ns;
 		
+		/* ADDI */
+		
+		// Immediate -> 23
+		instruction = { 10'b1001000100, 12'd23, 5'b1, 5'b1}; #10ns;
+		// Immediate -> -23
+		instruction = { 10'b1001000100, 12'b111111101001, 5'b1, 5'b1}; #10ns;
+		
 		/* NON-EXISTENT */
 		instruction = { 11'b10011000000, 9'd23, 12'b1}; #10ns;
 		
