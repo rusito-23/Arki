@@ -71,6 +71,19 @@ module maindec(
 				Branch = 0;
 				ALUOp = 2'b10;
 			end
+			
+			// ADDI
+			11'b100_1000_100?,
+			begin
+				Reg2Loc = 0;
+				ALUSrc = 0;
+				MemtoReg = 0;
+				RegWrite = 1;
+				MemRead = 0;
+				MemWrite = 0;
+				Branch = 0;
+				ALUOp = 2'b11;
+			end
 		
 			default: // ALL ZEROS
 			begin
