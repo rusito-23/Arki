@@ -1,0 +1,8 @@
+
+main.elf:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000000000 <.text>:
+   0:	91003d00 	add	x0, x8, #0xf
