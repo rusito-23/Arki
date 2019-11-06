@@ -11,11 +11,14 @@ module maindec_tb();
 		logic RegWrite;
 		logic MemRead;
 		logic MemWrite;
-		logic Branch;
+		logic BranchZero;
+		logic BranchNotZero;
 		logic [1:0] ALUOp;
 		
 		// instantiate device under test
-		maindec dut(Op, Reg2Loc, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch, ALUOp);
+		maindec dut(Op, Reg2Loc, ALUSrc, MemtoReg,
+						RegWrite, MemRead, MemWrite,
+						BranchZero, BranchNotZero, ALUOp);
 		
 		initial begin
 			
