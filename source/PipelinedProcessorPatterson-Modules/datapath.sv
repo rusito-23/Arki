@@ -53,11 +53,10 @@ module datapath #(parameter N = 64)
 										.reset(reset), 
 										.d({AluSrc, AluControl, BranchZero, BranchNotZero, memRead, memWrite, regWrite, memtoReg,	
 											qIF_ID[95:32], signImm_D, readData1_D, readData2_D, qIF_ID[4:0]}),
-										.q(qID_EX));	
-	
+										.q(qID_EX));
 										
 	execute 	#(64) 	EXECUTE 	(.AluSrc(qID_EX[271]),
-										.AluControl(qID_EX[270:265]),
+										.AluControl(qID_EX[270:267]),
 										.PC_E(qID_EX[260:197]), 
 										.signImm_E(qID_EX[196:133]), 
 										.readData1_E(qID_EX[132:69]), 
