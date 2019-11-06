@@ -28,6 +28,9 @@ module maindec_tb();
 			// Test CBZ
 			Op = 11'b101_1010_0010; #10ns;
 			
+			// Test CBNZ
+			Op = 11'b101_1010_0011; #10ns;
+			
 			// Test ADD
 			Op = 11'b100_0101_1000; #10ns;
 			
