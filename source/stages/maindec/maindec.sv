@@ -99,7 +99,7 @@ module maindec(
 				RegWrite = 0;
 				MemRead = 0;
 				MemWrite = 0;
-				BranchZero = 0;
+				BranchZero = 1;
 				BranchNotZero = 1;
 				ALUOp = 2'b01;
 			end
