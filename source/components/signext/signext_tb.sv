@@ -19,6 +19,13 @@ module signext_tb();
 		// Immediate -> -23
 		instruction = { 8'b10110100, 19'b1111111111111101001, 5'b1}; #10ns;
 		
+		/* CBNZ */
+	
+		// Immediate -> 23
+		instruction = { 8'b10110101, 19'd23, 5'b1}; #10ns;
+		// Immediate -> -23
+		instruction = { 8'b10110101, 19'b1111111111111101001, 5'b1}; #10ns;
+		
 		/* LDUR */
 	
 		//	Immediate -> 23
