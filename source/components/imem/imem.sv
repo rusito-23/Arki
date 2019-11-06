@@ -9,7 +9,7 @@ module imem
 			(input logic [5:0] addr, 
 			 output logic [N-1:0] q);
 										  
-	logic [N-1:0] ROM [0:63] = '{32'hb5000017,
+	logic [N-1:0] ROM [0:63] = '{32'h8b0f0101,
 											32'h00,
 											32'h00,
 											32'h00,

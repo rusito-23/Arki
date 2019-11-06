@@ -59,19 +59,6 @@ module maindec(
 				BranchNotZero = 0;
 				ALUOp = 2'b01;
 			end
-			
-			11'b101_1010_1???: // CBNZ
-			begin
-				Reg2Loc = 1;
-				ALUSrc = 0;
-				MemtoReg = 0;
-				RegWrite = 0;
-				MemRead = 0;
-				MemWrite = 0;
-				BranchZero = 0;
-				BranchNotZero = 1;
-				ALUOp = 2'b01;
-			end
 				
 			// Type-R
 			11'b100_0101_1000, // ADD
@@ -102,6 +89,19 @@ module maindec(
 				BranchZero = 0;
 				BranchNotZero = 0;
 				ALUOp = 2'b10;
+			end
+			
+			11'b101_1010_1???: // CBNZ
+			begin
+				Reg2Loc = 1;
+				ALUSrc = 0;
+				MemtoReg = 0;
+				RegWrite = 0;
+				MemRead = 0;
+				MemWrite = 0;
+				BranchZero = 0;
+				BranchNotZero = 1;
+				ALUOp = 2'b01;
 			end
 		
 			default: // ALL ZEROS
