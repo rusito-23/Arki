@@ -8,7 +8,7 @@ module processor_arm #(parameter N = 64)
 							
 	logic [31:0] q;		
 	logic [3:0] AluControl;
-	logic reg2loc, regWrite, AluSrc, Branch, memtoReg, memRead, memWrite;
+	logic reg2loc, regWrite, AluSrc, BranchZero, BranchNotZero, memtoReg, memRead, memWrite;
 	logic [N-1:0] DM_readData, IM_address;  //DM_addr, DM_writeData
 	logic DM_readEnable; //DM_writeEnable
 	logic [10:0] instr;
@@ -18,7 +18,8 @@ module processor_arm #(parameter N = 64)
 									.reg2loc(reg2loc), 
 									.regWrite(regWrite), 
 									.AluSrc(AluSrc), 
-									.Branch(Branch),
+									.BranchZero(BranchZero),
+									.BranchNotZero(BranchNotZero),
 									.memtoReg(memtoReg), 
 									.memRead(memRead), 
 									.memWrite(memWrite));
@@ -29,7 +30,8 @@ module processor_arm #(parameter N = 64)
 									.reg2loc(reg2loc), 
 									.AluSrc(AluSrc), 
 									.AluControl(AluControl), 
-									.Branch(Branch), 
+									.BranchZero(BranchZero),
+									.BranchNotZero(BranchNotZero),	
 									.memRead(memRead),
 									.memWrite(memWrite), 
 									.regWrite(regWrite), 

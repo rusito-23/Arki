@@ -14,7 +14,8 @@ module maindec(
 		output logic RegWrite,
 		output logic MemRead,
 		output logic MemWrite,
-		output logic Branch,
+		output logic BranchZero,
+		output logic BranchNotZero,
 		output logic [1:0] ALUOp);
 
 	always_comb begin
@@ -28,7 +29,8 @@ module maindec(
 				RegWrite = 1;
 				MemRead = 1;
 				MemWrite = 0;
-				Branch = 0;
+				BranchZero = 0;
+				BranchNotZero = 0;
 				ALUOp = 2'b00;
 			end
 				
@@ -40,7 +42,8 @@ module maindec(
 				RegWrite = 0;
 				MemRead = 0;
 				MemWrite = 1;
-				Branch = 0;
+				BranchZero = 0;
+				BranchNotZero = 0;
 				ALUOp = 2'b00;
 			end
 				
@@ -52,7 +55,8 @@ module maindec(
 				RegWrite = 0;
 				MemRead = 0;
 				MemWrite = 0;
-				Branch = 1;
+				BranchZero = 1;
+				BranchNotZero = 0;
 				ALUOp = 2'b01;
 			end
 				
@@ -68,7 +72,8 @@ module maindec(
 				RegWrite = 1;
 				MemRead = 0;
 				MemWrite = 0;
-				Branch = 0;
+				BranchZero = 0;
+				BranchNotZero = 0;
 				ALUOp = 2'b10;
 			end
 			
@@ -81,8 +86,22 @@ module maindec(
 				RegWrite = 1;
 				MemRead = 0;
 				MemWrite = 0;
-				Branch = 0;
+				BranchZero = 0;
+				BranchNotZero = 0;
 				ALUOp = 2'b10;
+			end
+			
+			11'b101_1010_1???: // CBNZ
+			begin
+				Reg2Loc = 1;
+				ALUSrc = 0;
+				MemtoReg = 0;
+				RegWrite = 0;
+				MemRead = 0;
+				MemWrite = 0;
+				BranchZero = 1;
+				BranchNotZero = 1;
+				ALUOp = 2'b01;
 			end
 		
 			default: // ALL ZEROS
@@ -93,7 +112,8 @@ module maindec(
 				RegWrite = 0;
 				MemRead = 0;
 				MemWrite = 0;
-				Branch = 0;
+				BranchZero = 0;
+				BranchNotZero = 0;
 				ALUOp = 2'b00;
 			end
 			

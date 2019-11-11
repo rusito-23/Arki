@@ -11,11 +11,14 @@ module maindec_tb();
 		logic RegWrite;
 		logic MemRead;
 		logic MemWrite;
-		logic Branch;
+		logic BranchZero;
+		logic BranchNotZero;
 		logic [1:0] ALUOp;
 		
 		// instantiate device under test
-		maindec dut(Op, Reg2Loc, ALUSrc, MemtoReg, RegWrite, MemRead, MemWrite, Branch, ALUOp);
+		maindec dut(Op, Reg2Loc, ALUSrc, MemtoReg,
+						RegWrite, MemRead, MemWrite,
+						BranchZero, BranchNotZero, ALUOp);
 		
 		initial begin
 			
@@ -27,6 +30,9 @@ module maindec_tb();
 			
 			// Test CBZ
 			Op = 11'b101_1010_0010; #10ns;
+			
+			// Test CBNZ
+			Op = 11'b101_1010_0011; #10ns;
 			
 			// Test ADD
 			Op = 11'b100_0101_1000; #10ns;
