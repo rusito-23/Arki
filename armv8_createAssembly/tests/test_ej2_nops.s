@@ -1,19 +1,40 @@
 	.text
 	.org 0x0000
 
+# Carga de registros en memoria
+	stur x0,[x0]
+	stur x1,[x0,#8]
+	stur x2,[x0,#16]
+	stur x3,[x0,#24]
+	stur x4,[x0,#32]
+	stur x5,[x0,#40]
+	stur x6,[x0,#48]
 
-SUB X23, X1, X1
-ADD X0, XZR, X4
-nop
-nop
-ADD X1, X0, X4
-nop
-nop
-ADD X2, X1, X4
-nop
-nop
-ADD X3, X2, X4
-STUR X0, [X23, #0]
-STUR X1, [X23, #8]
-STUR X2, [X23, #16]
-STUR X3, [X23, #24]
+# Lectura de memoria en los registros
+	ldur x7,[x0]
+	ldur x8,[x0,#8]
+	ldur x9,[x0,#16]
+	ldur x10,[x0,#24]
+	ldur x11,[x0,#32]
+	ldur x12,[x0,#40]
+	ldur x13,[x0,#48]
+
+# Sumatoria de los registros
+	sub x14,x14,x14
+	nop
+	nop
+
+	cbz x14, Loop
+	nop
+	nop
+
+	sub x15,x0,x1
+Loop:
+	add x15,x0,x1
+
+# Instrucciones NOP
+	nop
+	nop
+
+# Carga del resultado de la sumatoria en memoria
+	stur x15, [x0,#56]
