@@ -1,0 +1,19 @@
+
+main.elf:     file format elf64-littleaarch64
+
+
+Disassembly of section .text:
+
+0000000000000000 <loop-0x10>:
+   0:	cb000017 	sub	x23, x0, x0
+   4:	91003c0a 	add	x10, x0, #0xf
+   8:	aa14018b 	orr	x11, x12, x20
+   c:	8a14018c 	and	x12, x12, x20
+
+0000000000000010 <loop>:
+  10:	8b0a0000 	add	x0, x0, x10
+  14:	cb01014a 	sub	x10, x10, x1
+  18:	f80002eb 	stur	x11, [x23]
+  1c:	f80082ec 	stur	x12, [x23, #8]
+  20:	b5ffff8a 	cbnz	x10, 10 <loop>
+  24:	f80102e0 	stur	x0, [x23, #16]
